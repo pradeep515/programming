@@ -1,9 +1,9 @@
-Complete the getNode function in the editor below.
+# Complete the getNode function in the editor below.
 
-getNode has the following parameters:
+# getNode has the following parameters:
 
-SinglyLinkedListNode pointer head: refers to the head of the list
-int positionFromTail: the item to retrieve
+# SinglyLinkedListNode pointer head: refers to the head of the list
+# int positionFromTail: the item to retrieve
 
 def getNode(llist, positionFromTail):
     head = llist
