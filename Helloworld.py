@@ -1,10 +1,14 @@
 # # print ('hello world')
-# namelist = ["pradeep", "srekanth", "radhika", "ramani", "vinesh"]
-# namelist.append("ramya")
-# print(namelist)
-s = "I am good man"
-print(s.count('o'))
-print(s[::-1])
+namelist = ["pradeep", "srekanth", "radhika", "ramani", "vinesh"]
+namelist.append("ramya")
+print(namelist)
+namelist.pop()
+print(namelist)
+namelist.insert(3,"ramya")
+print(namelist)
+# s = "I am good man"
+# print(s.count('o'))
+# print(s[::-1])
 # print(len(s))
 # #tuple\
 # tup = ("can", "apples", "bananas")
@@ -20,8 +24,8 @@ print(s[::-1])
 # print(fruitsset)
 
 # #for
-listtest = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,23232]
-print(max(listtest))
+# listtest = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,23232]
+# print(max(listtest))
 
 # #functions
 # def addition(num1, num2):
@@ -47,5 +51,5 @@ print(max(listtest))
 # print(next(numlistiter))
 # print(next(numlistiter))
 # print(next(numlistiter))
-input = input("Enter username:")
-print(input)
+# input = input("Enter username:")
+# print(input)
