@@ -1,7 +1,7 @@
 graph = {"A":["B", "C"], 
 'B': ['c']}  #python dictionary list of the nodes
 
-Queue = [] 
+queue = [] 
 visited = set()
 
 def bfs(node,graph, visited):
