@@ -1,4 +1,4 @@
-# array = [1,2,4,6,7,8,33,55,66]
+array = [1,2,4,6,7,8,33,55,66]
 
 # Search get the index of 7
 def binarysearch(searchnumber, lower, upper):
