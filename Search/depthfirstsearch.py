@@ -15,4 +15,5 @@ def dfs(node, visited, graph):
         print (node)
         visted.add(node)
     for neighbour in graph[node]:
-        dfs(neighbour, visited, graph)
+        if(neighbour not in visited):
+            dfs(neighbour, visited, graph)
