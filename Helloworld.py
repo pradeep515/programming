@@ -1,11 +1,5 @@
 # # print ('hello world')
-namelist = ["pradeep", "srekanth", "radhika", "ramani", "vinesh"]
-namelist.append("ramya")
-print(namelist)
-namelist.pop()
-print(namelist)
-namelist.insert(3,"ramya")
-print(namelist)
+
 # s = "I am good man"
 # print(s.count('o'))
 # print(s[::-1])
@@ -53,3 +47,12 @@ print(namelist)
 # print(next(numlistiter))
 # input = input("Enter username:")
 # print(input)
+
+newset = {"pradeep","sreekanth"}
+newset.add("radhika")
+newset.add("pradeep1")
+print(sorted(newset))
+print(newset)
+
+
+
