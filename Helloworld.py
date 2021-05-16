@@ -48,11 +48,24 @@
 # input = input("Enter username:")
 # print(input)
 
-newset = {"pradeep","sreekanth"}
-newset.add("radhika")
-newset.add("pradeep1")
-print(sorted(newset))
-print(newset)
+# newset = {"pradeep","sreekanth"}
+# newset.add("radhika")
+# newset.add("pradeep1")
+# print(sorted(newset))
+# print(newset)
+
+#dict update
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+# thisdict.update({'year':5959})
+# print(thisdict)
+print(thisdict.keys())
+print(thisdict.values())
+
+
 
 
 
