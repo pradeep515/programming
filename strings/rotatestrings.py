@@ -11,7 +11,7 @@ def rightrotate(name, dspaces):
 
 
 def main():
-    name = "Ramya"
+    name = "pradeep"
     leftrotate(name, 3)
     rightrotate(name, 3)
     
