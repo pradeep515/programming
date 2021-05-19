@@ -1,0 +1,7 @@
+Sort linked list
+Find levelwise sum of binary tree
+Given two strings, find the longest common Substring
+Minimum Squares sum up to a number
+implement multiplication using only addition
+Remapping and Dedouping concepts
+convert binary treee into a binary search treee
