@@ -1,5 +1,5 @@
 
-
+#easy method
 def anagram(str, str1):
     str = sorted(str)
     str1 = sorted(str1)
