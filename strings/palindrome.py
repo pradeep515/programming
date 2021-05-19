@@ -21,4 +21,4 @@ def isPalindrome1(str1):
 
 if __name__ == '__main__':
     str = "lol"
-    isPalindrome1(str)
+    ispalindrome1(str)
