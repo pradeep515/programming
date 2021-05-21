@@ -21,5 +21,5 @@ class Solution:
         maxSubArray = currentSubArray = nums[0]
         for num in nums[1:]:
             currentSubArray = max(num, currentSubArray +num ) # reset currentSubarray  to num if it values is -ve.
-            maxSubArray = max(maxSubArray, currentSubArray)                
+            maxSubArray = max(maxSubArray, currentSubArray)
         return maxSubArray
