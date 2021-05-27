@@ -11,10 +11,10 @@ def reverse(head):
     if(head == None or head.next == None):
         return head
     else:
-        rest = reverse(head.next)
+        reversedlist = reverse(head.next)
         head.next.next = head
         head.next = None
-        return rest
+        return reversedlist
 
 
  # iterative solution   -- Take two pointers , Prev and nextnode
@@ -22,7 +22,7 @@ null-> 1 ->2->4->5-> null
 prev  head -> next node
 
   node prev = None
-  node next = None
+  node nextnode = None
   while(head!= None):
       nextnode = head.next
       head.next = prev

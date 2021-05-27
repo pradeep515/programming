@@ -55,15 +55,23 @@
 # print(newset)
 
 #dict update
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
 # thisdict.update({'year':5959})
 # print(thisdict)
-print(thisdict.keys())
-print(thisdict.values())
+# print(thisdict.keys())
+# print(thisdict.values())
+# print(thisdict.items())
+
+list = []
+list.append("pradeep")
+print(list)
+
+            
+
 
 
 
