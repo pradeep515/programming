@@ -6,7 +6,7 @@
 #    4) Fix head pointer
 
 
-#reverse a linkedlist
+#reverse a linkedlist recursive
 def reverse(head):
     if(head == None or head.next == None):
         return head
@@ -15,3 +15,18 @@ def reverse(head):
         head.next.next = head
         head.next = None
         return rest
+
+
+ # iterative solution   -- Take two pointers , Prev and nextnode
+null-> 1 ->2->4->5-> null 
+prev  head -> next node
+
+  node prev = None
+  node next = None
+  while(head!= None):
+      nextnode = head.next
+      head.next = prev
+      prev = head
+      head = nextnode.
+  return prev 
+      
