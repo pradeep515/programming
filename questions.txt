@@ -5,3 +5,4 @@ Minimum Squares sum up to a number
 implement multiplication using only addition
 Remapping and Dedouping concepts
 convert binary treee into a binary search treee
+quick sort, selection sort, merge sort
