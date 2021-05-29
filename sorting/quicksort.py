@@ -7,7 +7,7 @@
 
 def quicksort(array, left , right):
     if(left <= right):
-        pivot = (left+right)/2
+        pivot = array[(left+right)/2]
         partitionindex = partitioner(array, left, right, pivot)
         quicksort(array,left, partitionindex-1)
         quicksort(array, partitionindex, right)
