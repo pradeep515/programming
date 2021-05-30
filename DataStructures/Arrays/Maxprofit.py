@@ -10,8 +10,8 @@ class Solution:
         l=0
         r=l+1
         maxprofit = 0 
-        while(r<len(prices)):
-            if(prices[l]<prices[r]):
+        while(r<len(prices)): # dont want to jump the number of elements
+            if(prices[l]<prices[r]): # profitable or not 
                 maxprofit = max(maxprofit, prices[r]-prices[l])
             else:
                 l = r
