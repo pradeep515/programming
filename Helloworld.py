@@ -66,10 +66,9 @@
 # print(thisdict.values())
 # print(thisdict.items())
 
-list = []
-list.append("pradeep")
-print(list)
-
+list = [1,2,3,4,1]
+for j in list[0:]:
+    print (j)
             
 
 

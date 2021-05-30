@@ -4,13 +4,17 @@
 # In formal terms, we need to find \max(\text{prices[j]} - \text{prices[i]})max(prices[j]−prices[i]), for every ii and jj such that j > ij>i.
 #
 
-
+#https://www.youtube.com/watch?v=1pkOgXD63yU
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        maxprofit = 0
-        for price in prices[0:]:
-            for currentprice in prices[1:]:
-                if(currentprice-price>maxprofit):
-                    maxprofit = currentprice-price
+    def maxProfit(self, prices):
+        l=0
+        r=l+1
+        maxprofit = 0 
+        while(r<len(prices)):
+            if(prices[l]<prices[r]):
+                maxprofit = max(maxprofit, prices[r]-prices[l])
+            else:
+                l = r
         return maxprofit
+
                 
