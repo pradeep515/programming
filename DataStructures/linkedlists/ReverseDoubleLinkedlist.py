@@ -7,10 +7,10 @@ def reverse(llist):
         currentnode = llist
         head = currentnode
         while(currentnode != None and currentnode.next != None):
-            tempnode = currentnode.prev
+            previous = currentnode.prev    #save the previous pointer before pointing  currentnode.prev to next 
             currentnode.prev = currentnode.next
-            currentnode.next = tempnode
-            currentnode = currentnode.prev
-        currentnode.next = currentnode.prev
-        currentnode.prev = None
-        return currentnode
+            currentnode.next = previous
+            currentnode = currentnode.prev    # traverse in back because it has be reversed.
+        previous = currentnode.prev  # explicitly move the previous since the currentnode is null to point to the first node. 
+        head = previous
+        return head 
