@@ -66,9 +66,8 @@
 # print(thisdict.values())
 # print(thisdict.items())
 
-list = [1,2,3,4,1]
-for j in list[0:]:
-    print (j)
+
+print(4/2)
             
 
 
