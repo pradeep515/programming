@@ -67,8 +67,14 @@
 # print(thisdict.items())
 
 
-print(4/2)
-            
+list = []
+list.append("a")
+print list  
+list.append("b")  
+print list
+print(list.pop(0))
+print list
+
 
 
 

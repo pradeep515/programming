@@ -23,5 +23,6 @@ def mergesort(array):
         while(j<len(right)):
             newarray[k]= right[j]
             j = j+1
+            k = k+1
     else:
         return array
