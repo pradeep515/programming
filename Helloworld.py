@@ -1,3 +1,4 @@
+
 # # print ('hello world')
 
 # s = "I am good man"
@@ -87,7 +88,7 @@ list = [3,4,3,5,3,4,6,7]
 countdict = {}
 for i in list:
     if i in countdict:
-        countdict[i] = countdict.get(i) +1
+        countdict[i] = countdict.get(i) + 1
     else:
         countdict[i] = 1
 
