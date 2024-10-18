@@ -3,14 +3,27 @@
 
 # Note: The head node might be NULL to indicate that the list is empty.
 
-def reverse(llist):
-        currentnode = llist
-        head = currentnode
-        while(currentnode != None and currentnode.next != None):
-            previous = currentnode.prev    #save the previous pointer before pointing  currentnode.prev to next 
-            currentnode.prev = currentnode.next
-            currentnode.next = previous
-            currentnode = currentnode.prev    # traverse in back because it has be reversed.
-        previous = currentnode.prev  # explicitly move the previous since the currentnode is null to point to the first node. 
-        head = previous
-        return head 
+#first way
+def reverse(head):
+    if not head:
+        return head
+    else:
+        while head.next:
+            head.next, head.prev, head = head.prev, head.next, head.next
+        head.next, head.prev = head.prev, None
+        return head
+    
+#second way 
+def reverse(head):
+    if not head:
+        return head
+    else:
+        current = head
+        while current:
+            tmp = current.prev
+            current.prev = current.next
+            current.next = tmp
+            current = current.prev
+        if tmp:
+            tmp = tmp.prev
+        return tmp

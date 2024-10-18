@@ -1,15 +1,14 @@
-#Selection sort
-# Compare the fixed pointer with variable pointer(pointer next of fixed) and swap if fixed is greater than variable pointer, increment variable pointer
-# increament fixed (variable pointer will be next of fixed)
-#The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning.
+# slection sort
+selection = [1,68,6,4,44,777,88,45,11]
 
-def selectionsort(array):
-    for i in range(0,len(array)):
-        for j in range(i+1, len(array)):
-             if(array[i]>array[j]):
-                 array[i],array[j] = array[j],array[i]
-
-if __name__ == "__main__":
-    array=[56,32,43,23,11,1]
-    selectionsort(array)
-    print(array)
+# 1 - loop through the elements an find the minimum number . 
+# @ - Swap the mimimum element to the front. 
+# 3 - Then repeat the same leaving the first element
+size = len(selection)
+for i in range(size):
+    minindex = i
+    for j in range(i+1,size):#we can take i+1 as starting point, since we set minindex to i in the first run. So we can compare it with i+1 and so on
+        if selection[j]< selection[minindex]:
+            minindex = j 
+    selection[i], selection[minindex] = selection[minindex], selection[i]
+print (selection)

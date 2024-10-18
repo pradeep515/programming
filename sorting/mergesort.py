@@ -1,27 +1,31 @@
-array = [1,5,3,232,545,743,34,3]
 def mergesort(array):
     if(len(array)> 1):
-        mid = len(array)/2    
+        mid = len(array)//2    
         left = array[:mid]
         right = array[mid:]
         mergesort(left)   
         mergesort(right)
-        i=j=k=0
-        newarray = []
+        k=i=j=0
         while(i<len(left) and j< len(right)):     
             if(left[i]<right[j]):
-                newarray[k] = left[i]
+                array[k] = left[i]
                 i = i+1
             else:
-                newarray[k] = right[j]
+                array[k] = right[j]
                 j= j+1
-            k= k+1
+            k = k +1
         while(i<len(left)):
-            newarray[k] = left[i]
+            array[k] = left[i]
             i= i+ 1
-            k = k+1
+            k= k +1
         while(j<len(right)):
-            newarray[k]= right[j]
+            array[k]= right[j]
             j = j+1
-    else:
-        return array
+            k = k +1
+    return array
+
+if __name__ == "__main__":
+    listtobesorted = [6,77,44,66,77,88,66,444,55,665,333,332]
+    print (listtobesorted)
+    sortedlist = mergesort(listtobesorted)
+    print (sortedlist)

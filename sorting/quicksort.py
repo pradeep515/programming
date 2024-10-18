@@ -1,29 +1,25 @@
-# Quick sort 
-#[12,14,15,13,89,23,44,131]
-# 1) First mark the right most as the pivot index
-# 2) move the values less the pivot index value to it left and greater values to its right (partitioner)
-# 3) Then pass the left and right  side values of the pivot to the quick sort recursively .
-# 
+""" 
+1 - choose a pivot of your chooosing
+2 - compare to pivot value and insert lesser values to left and higher values to right
+3 - recursively call the function passing left and right and combine them and pivot as well .
+"""
 
-def quicksort(array, left , right):
-    if(left <= right):
-        pivot = array[(left+right)/2]
-        partitionindex = partitioner(array, left, right, pivot)
-        quicksort(array,left, partitionindex-1)
-        quicksort(array, partitionindex, right)
-    else:
-        return
 
-def partitioner(array , left , right, pivot):
-    while(left <= right):
-        while(array[left] < pivot):
-            left++            #breaks when left element is greater than pivot so needs to be swapped
-        while(array[right]> pivot):
-            right--           #breaks when right element is less than pivot so needs to be swapped
-        if(left<=right):
-            array[left],array[right] = array[right],array[left]  #or swap(array,left, right)
-            left++
-            right--
-    return left
-        
+def quicksort(list_to_sort):
+    if len(list_to_sort)<1:
+        return list_to_sort
+    pivot = list_to_sort[0]   # choosing the first element as the pivot
+    left = []
+    right = []
+    for i in list_to_sort[1:]:    # leaving the pivot slot  and sorting go through the remaining elements
+        if i < pivot:
+            left.append(i)
+        else:
+            right.append(i)
+    return quicksort(left)+[pivot]+quicksort(right) 
+
+if __name__ == "__main__":
+    list_to_sort = [1,2,3,4,45,22,66,323]
+    sortedlist = quicksort(list_to_sort)
+    print(sortedlist)
                    

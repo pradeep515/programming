@@ -1,11 +1,10 @@
-
 def lca(root, v1, v2):
-  if(root == None):
-    return root
-  else:
-    if(root.info < v1 and root.info<v2):
-        return lca(root.right, v1, v2)
-    elif(root.info>v1 and root.info>v2):
-        return lca(root.left, v1, v2)
-    else:
-        return root
+    if v1 > v2:
+        v1, v2 = v2, v1
+    while (True):
+        if root.info > v1 and root.info>v2:
+            root = root.left
+        elif root.info<v1 and root.info <v2:
+            root = root.right
+        else:
+            return root
