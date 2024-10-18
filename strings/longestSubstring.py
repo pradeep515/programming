@@ -11,10 +11,14 @@ def longestsubstring(name):
         if(char not in substring):
             substring = substring + char
         else:
-            if(len(longestsubstringcalculated) < len(substring)):
-                longestsubstringcalculated = substring
-            substring = ''
-            longestsubstring(name[1:])
+            # if(len(longestsubstringcalculated) < len(substring)):
+            #     longestsubstringcalculated = substring
+            # substring = ''
+            if (len(longestsubstringcalculated) < len(substring)):
+                   longestsubstringcalculated = substring
+                   substring = char 
+            else:
+                   substring = char
 
         
 if __name__ == '__main__':
