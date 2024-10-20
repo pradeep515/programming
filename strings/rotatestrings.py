@@ -1,12 +1,12 @@
 #rotate string either left or right based on d numbers
-def leftrotate(name, dspaces):
+def leftrotate(name, d):
     rotatedstring = ''
-    rotatedstring = name[dspaces:]+name[0:dspaces]
+    rotatedstring = name[d:]+name[:d]
     print (rotatedstring)
 
-def rightrotate(name, dspaces):
+def rightrotate(name, d):
     rotatedstring = ''
-    rotatedstring = name[-dspaces:]+name[:len(name)-dspaces] 
+    rotatedstring = name[-d:]+name[:-d] 
     print (rotatedstring)
 
 

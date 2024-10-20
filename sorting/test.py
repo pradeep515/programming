@@ -1,12 +1,13 @@
-#rotate strings
 
-name = "pradeep"
-rotatedname = "deeepra"
-concatedname = name + name
-print (concatedname)
-if len(name)!=len(rotatedname):
-    print (False)
-if rotatedname in concatedname:
-    print(True)
-else:
-    print(False)
+def leftrotation(s,d):
+     leftroatationstring = s[d:]+s[:d]
+     rightrotatedstring = s[-d:]+s[:-d]
+     print(leftroatationstring)
+     print(rightrotatedstring)
+
+          
+
+
+if __name__ == "__main__":
+     name = 'pradeep'
+     leftrotation(name,4)
