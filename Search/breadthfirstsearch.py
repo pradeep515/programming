@@ -14,4 +14,18 @@ def bfs(node,graph, visited):
             if(neighbour not in visited):
              queue.append(neighbour)
              visited.add(neighbour)
+
+#another way to do it 
+def BFS(head):
+    if not head :
+        return 
+    testqueue = collections.dequeue();
+    testqueue.append(head)
+    while testqueue:
+        node = testqueue.popleft()
+        print (node.info)
+        if node.left:
+            testqueue.append(node.left)
+        if node.right:
+            testqueue.append(node.right)
              
