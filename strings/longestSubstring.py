@@ -29,5 +29,5 @@ def findlongestsubstring1(s):
      return longestlength
 
 if __name__ == "__main__":
-     name = 'pradeep'
+     name = 'geekforgeeks'
      print( findlongestsubstring1(name))

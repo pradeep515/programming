@@ -5,16 +5,20 @@
 #
 
 #https://www.youtube.com/watch?v=1pkOgXD63yU
-class Solution:
-    def maxProfit(self, prices):
-        l=0
-        r=l+1
-        maxprofit = 0 
-        while(r<len(prices)): # dont want to jump the number of elements
-            if(prices[l]<prices[r]): # profitable or not 
-                maxprofit = max(maxprofit, prices[r]-prices[l])
-            else:
-                l = r
-        return maxprofit
 
-                
+def maxProfit(prices):
+    l=0
+    r=l+1
+    maxprofit = 0 
+    while(r<len(prices)): # dont want to jump the number of elements
+        if(prices[l]<prices[r]): # profitable or not 
+            maxprofit = max(maxprofit, prices[r]-prices[l])
+        else:
+            l = r
+        r += 1
+    return maxprofit
+    
+if __name__ == "__main__":
+    valuelist = [-1,1,5,2,6,8,44]
+    print(maxProfit(valuelist))
+

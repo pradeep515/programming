@@ -3,18 +3,7 @@
 # Output: 6
 # Explanation: [4,-1,2,1] has the largest sum = 6.
 
-# Method 1 -- Brute fore -- time complexity - o(n2)- spacecomplexity - 0(1)
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        maxsubarray = -math.inf
-        for i in range(len(nums)):
-            isubarray = 0
-            for j in range(i, len(nums)):
-                isubarray= isubarray + nums[j]
-                maxsubarray = max(maxsubarray, isubarray)
-        return maxsubarray
 
-#Method 2
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:

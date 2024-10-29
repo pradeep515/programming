@@ -1,16 +1,22 @@
 
-def palindrome(str):
-    name = str
-    frontpointer = 0
-    backpointer = len(name)-1
-    while frontpointer < backpointer:
-        if name[frontpointer] == name[backpointer]:
-            frontpointer = frontpointer+1
-            backpointer = backpointer-1
-        else:
-            return False
-    return True
+def sqrt(num):
+   if  num == 0 or num ==1:
+      return num
+   else:
+      for i in range(2, num):
+         if i*i > num:
+            return i-1
 
+   
+
+ 
+
+
+    
 if __name__ == "__main__":
-    boolenavalue = palindrome("addadda")
-    print(boolenavalue)
+   print(sqrt(200))
+
+
+
+ 
+

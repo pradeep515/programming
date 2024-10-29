@@ -1,16 +1,15 @@
 import math
 # linear method
-def squareroot(x):
-    if (x == 0 or x ==1):
-        return x
+def evenodd(x):
+    if x%2 ==0 :
+        print("even")
     else:
-        for i in range(2,x):
-            if (i*i >= x):
-                return i-1
+        print("odd")
+
 
          
 
 if __name__=="__main__":
-    print(squareroot(50))
+    evenodd(-10)
 
         

@@ -91,23 +91,24 @@ for i in list:
         countdict[i] = countdict.get(i) + 1
     else:
         countdict[i] = 1
+print (countdict)
 
-maxvalue = 0
-maxkey = 0
-for key,value in countdict.items():
-    if value > maxvalue:
-        maxvalue = value
-        maxkey = key 
-# print(maxkey)
-i = 0
-j = 0
-for number in list:
-    if maxkey == number:
-        j = j + 1
-        i = j
-    else:
-        j = j + 1
-print i
+# maxvalue = 0
+# maxkey = 0
+# for key,value in countdict.items():
+#     if value > maxvalue:
+#         maxvalue = value
+#         maxkey = key 
+# # print(maxkey)
+# i = 0
+# j = 0
+# for number in list:
+#     if maxkey == number:
+#         j = j + 1
+#         i = j
+#     else:
+#         j = j + 1
+# print i
 
 
 
