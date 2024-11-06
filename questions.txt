@@ -6,3 +6,20 @@ implement multiplication using only addition
 Remapping and Dedouping concepts
 convert binary treee into a binary search treee
 quick sort, selection sort, merge sort
+
+
+1. Platform Engineering
+
+Control Plane Development:
+Developed platforms for hosting microservices, akin to Kubernetes, utilizing Nomad for orchestration, Vault for secret management, and Consul for service discovery.
+Audit Logging for Compliance:
+Implemented a comprehensive audit logging solution using the ELK stack to ensure compliance. Logs were delivered from systems to Logstash via Filebeat, then stored in S3 for integration with Splunk for auditing purposes.
+Real-Time Observability:
+Enabled real-time metrics delivery by integrating Telegraf and StatsD with Prometheus, facilitating the visualization of data through Grafana dashboards.
+increase the operation efficiency by 10x 
+
+2. Data Bucket 
+I have designed and implemented highly automated solutions for systems such as Glue catalog synchronizers, real-time synchronizers, and data compaction systems. My work includes data ingestion utilizing Python, Kinesis Streams, CloudFormation templates, and AWS Lambda. Additionally, I built a data lake that supports 200 TB of data. These projects have significantly impacted the company, contributing to an acceleration in innovation and affecting at least 2% of our operations, either directly or indirectly.
+
+devops 
+reading time management books, kayaking, standup paddle boarding , hiking and gardening

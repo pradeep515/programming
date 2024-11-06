@@ -84,14 +84,26 @@
 #         countdict[i] = 1
 # print(countdict.items())
 
-list = [3,4,3,5,3,4,6,7]
-countdict = {}
-for i in list:
-    if i in countdict:
-        countdict[i] = countdict.get(i) + 1
-    else:
-        countdict[i] = 1
-print (countdict)
+# list = [3,4,3,5,3,4,6,7]
+# countdict = {}
+# for i in list:
+#     if i in countdict:
+#         countdict[i] = countdict.get(i) + 1
+#     else:
+#         countdict[i] = 1
+# print (countdict)
+
+#indices test case
+# testlist = [1,2,4,5]
+# res = []
+# for i in range(len(testlist)):
+#     res[i]=1
+testlist = [1,2,4,5]
+for i in range(len(testlist)-1,-1,-1):
+    print (i)
+
+
+
 
 # maxvalue = 0
 # maxkey = 0

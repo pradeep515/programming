@@ -1,20 +1,25 @@
 #Reverse a string
 # print(char)
 
-def reverse1(str):
-    if(len(str)<1):
-        return str
-    else:
-        firstchar = str[0:1]
-        remainingstring = str[1:]
-        reversedstring = reverse1(remainingstring)+firstchar
-    return reversedstring
+def reverse(str):
+    # Just reverses the string 
+    return str[::-1]
 
-def main():
-    name = 'pradeep'
-    str = reverse1(name)
-    print(str)
+def WordsReversed(sentence):
+    #Reverse words in a string and removed any white spaces . ex ( I am blue -> blue am i )
+    words = sentence.strip().split()
+    words.reverse()
+    return " ".join(words)
+
+def findindex (name,name1):
+    if name1 in name:
+        index = name.find(name1)
+        return index
+
+
 
 if __name__ == "__main__":
-    main()
+    # reverse()
+    # print(WordsReversed("I am blue"))
+    print(findindex("pradeep","deep"))
 

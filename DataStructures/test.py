@@ -1,22 +1,10 @@
 
-def sqrt(num):
-   if  num == 0 or num ==1:
-      return num
-   else:
-      for i in range(2, num):
-         if i*i > num:
-            return i-1
+from collections import Counter
 
-   
-
- 
-
-
+def rotate(testlist,k):
+    testlist = testlist[-k:]
+    return testlist
     
 if __name__ == "__main__":
-   print(sqrt(200))
-
-
-
- 
-
+    testlist = [1,2,3,4,5,6,7]
+    print(rotate(testlist,3))
