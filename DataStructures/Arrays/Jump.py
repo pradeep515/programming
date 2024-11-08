@@ -19,5 +19,5 @@ def jump(jumplist):
     return False
     
 if __name__ == "__main__":
-    testlist = [2,3,1,0,3]
+    testlist = [1,2,0,0,7]
     print(jump(testlist))
