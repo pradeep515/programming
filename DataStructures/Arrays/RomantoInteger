@@ -1,0 +1,23 @@
+def romtointeger(romanstring):
+    romandict = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+       }
+    intvalue = 0 
+    for i in range(len(romanstring)-1, -1, -1):
+        if romandict[romanstring[i]] < romandict[romanstring[i-1]]:
+            intvalue -= romandict[romanstring[i]]
+        else:
+            intvalue += romandict[romanstring[i]]
+    return intvalue
+    
+
+    
+if __name__ == "__main__":
+    romanstring = "LVIII"
+    print(romtointeger(romanstring))
