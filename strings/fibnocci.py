@@ -9,12 +9,8 @@ def fib(n):
     else:
         return fib(n-1)+ fib(n-2)
 
-
-if __name__ == '__main__':
-    print(fib(9))
-
 #another way to do it using iterative time complexity is )(n)
- def fib(n):
+def fib1(n):
     if n<0:
         raise ValueError("Input should be a positive integer")
     elif n==0:
@@ -26,6 +22,9 @@ if __name__ == '__main__':
         for i in range(2,n+1):
             a, b = b, a+b
         return b
+    
+if __name__ == '__main__':
+    print(fib1(10))
 
 
 

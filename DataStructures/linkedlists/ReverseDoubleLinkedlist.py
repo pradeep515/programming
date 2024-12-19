@@ -13,6 +13,10 @@ def reverse(head):
         head.next, head.prev = head.prev, None
         return head
     
+          while current :
+           current.next, c.prev, current = prev, current.next, current.next
+     current.prev = None
+    
 #second way 
 def reverse(head):
     if not head:

@@ -1,15 +1,21 @@
 import math
 # linear method
-def evenodd(x):
-    if x%2 ==0 :
-        print("even")
-    else:
-        print("odd")
+def squareroot(x):
+    if x < 0:
+        raise ValueError ("enter positive integers")
+    i = 1 
+    while i < x//2:
+        if i * i > x :
+            return i-1
+        else:
+            i += 1
+
+
 
 
          
 
 if __name__=="__main__":
-    evenodd(-10)
+    print(squareroot(110))
 
         

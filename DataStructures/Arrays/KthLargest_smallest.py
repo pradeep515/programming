@@ -26,5 +26,7 @@ def kthsmallest(list, k):
 
 if __name__== '__main__':
     list = [3,1,5,12,2,11]
+    str = "test"
+    print(str[1])
     print(kthlargest(list,3))
     print(kthsmallest(list,4))

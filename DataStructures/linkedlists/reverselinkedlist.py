@@ -29,4 +29,16 @@ prev  head -> next node
       prev = head
       head = nextnode.
   return prev 
+
+
+  reverselinkedlist (head):
+    prev = None 
+    current = head 
+    prev.next = current 
+ 
+
+   while current:
+      current.next, current ,prev = prev , current.next, current
+      return prev
+
       
