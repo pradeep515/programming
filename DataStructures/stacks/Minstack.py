@@ -8,7 +8,7 @@ class MinStack:
     def push(self, val: int) -> None:
         self.stack.append(val)
         
-        if not self.minstack or val < self.minstack[-1]:
+        if not self.minstack or val <= self.minstack[-1]:
             self.minstack.append(val)
         
 
