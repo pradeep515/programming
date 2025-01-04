@@ -1,22 +1,43 @@
-from collections import defaultdict
-def insertion(list,list2):
 
-    for dates, lacts in zip(list, list2):
-        print (dates, lacts)
+class MinStack:
 
+    def __init__(self):
+        self.minstack = []
+        self.minvalue_stack = [] 
+        
 
-                
+    def push(self, val: int) -> None:
+        self.minstack.append(val)
 
+        if not self.minvalue_stack or val <= self.minvalue_stack[-1]:
+            self.minvalue_stack.append(val)
+        
 
+    def pop(self) -> None:
+        deleted_item = self.minstack.pop()
+        if deleted_item == self.minvalue_stack[-1]:
+            self.minvalue_stack.pop()
+        
+        
 
-
+    def top(self) -> int:
+        return self.minstack[-1]
 
         
 
+    def getMin(self) -> int:
+        return self.minvalue_stack[-1]
+
 
 if __name__ == "__main__":
-    list = [1,4,5,-1,56,78,23]
-    list2 = [4,5,7,9,56,78,23]
-    print(insertion(list, list2))
+
+    teststack = MinStack()
+    teststack.push(-2)
+    teststack.push(0)
+    teststack.push(-3)
+    print(teststack.getMin())
+    teststack.pop()
+    print(teststack.top())
+    print(teststack.getMin())
 
 
