@@ -23,3 +23,29 @@ def levelOrder(root):
                 testqueue.append(poppednode.left)
             if poppednode.right:
                 testqueue.append(poppednode.right)
+
+
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root :
+            return [] 
+
+        lqueue = deque()
+        lqueue.append([root])
+        resultqueue = []
+
+        while lqueue:
+            level = []
+            levelsize = len(lqueue)
+
+            for _ in range(levelsize):
+                Node = lqueue.popleft()
+                level.append(Node.val)
+
+                if Node.left:
+                    lqueue.append(Node.left)
+                if Node.right:
+                    lqueue.append(Node.right)
+            resultqueue.append(level)
+            
+        return resultqueue

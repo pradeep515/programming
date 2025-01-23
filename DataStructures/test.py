@@ -1,43 +1,26 @@
+class Runningavg:
 
-class MinStack:
+    def __init__(self, max_value = float('inf'), min_value = float("-inf")):
+        self.runningavg = 0
+        self.count = 0 
+        self.max_value = max_value
+        self.min_value = min_value
 
-    def __init__(self):
-        self.minstack = []
-        self.minvalue_stack = [] 
+    def get_runninAvg(self, num):
+        self.runningavg += num
+        self.count += 1
+        num = max(self.min_value, min(self.max_value, num))
+        print(num)
+
+        return self.runningavg / self.count
+
+
+
+
+
+input = [10,20,30,40,50, -1,10001]
+rv = Runningavg(max_value = 10000, min_value = 0)
+for i in input:
+    print(rv.get_runninAvg(i))
         
-
-    def push(self, val: int) -> None:
-        self.minstack.append(val)
-
-        if not self.minvalue_stack or val <= self.minvalue_stack[-1]:
-            self.minvalue_stack.append(val)
-        
-
-    def pop(self) -> None:
-        deleted_item = self.minstack.pop()
-        if deleted_item == self.minvalue_stack[-1]:
-            self.minvalue_stack.pop()
-        
-        
-
-    def top(self) -> int:
-        return self.minstack[-1]
-
-        
-
-    def getMin(self) -> int:
-        return self.minvalue_stack[-1]
-
-
-if __name__ == "__main__":
-
-    teststack = MinStack()
-    teststack.push(-2)
-    teststack.push(0)
-    teststack.push(-3)
-    print(teststack.getMin())
-    teststack.pop()
-    print(teststack.top())
-    print(teststack.getMin())
-
 
