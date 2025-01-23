@@ -1,26 +1,26 @@
-class Runningavg:
+def insertionsort(nums):
 
-    def __init__(self, max_value = float('inf'), min_value = float("-inf")):
-        self.runningavg = 0
-        self.count = 0 
-        self.max_value = max_value
-        self.min_value = min_value
-
-    def get_runninAvg(self, num):
-        self.runningavg += num
-        self.count += 1
-        num = max(self.min_value, min(self.max_value, num))
-        print(num)
-
-        return self.runningavg / self.count
+    for i in range(1, len(nums)):
+        j = i - 1
+        key = list[i]
+        while j >= 0  and nums[j] > key:
+            nums[j+1] = nums[j]
+            j -= 1
+        nums[j+1] = key
+    return nums
+            
 
 
 
+if __name__ == "__main__":
+
+    list = [4,6,2,-1,9,55,33]
+    print(insertionsort(list))
 
 
-input = [10,20,30,40,50, -1,10001]
-rv = Runningavg(max_value = 10000, min_value = 0)
-for i in input:
-    print(rv.get_runninAvg(i))
+
+
+
+
         
 
