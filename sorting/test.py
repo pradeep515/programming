@@ -1,21 +1,22 @@
 from collections import Counter
-def longest_substring(lstring):
+def merge(strs):
+        result = [] 
+        result_dict = {}
 
-    left, testset = 0 , set()
-    max_substring_len = 0
-
-    for right in range(len(lstring)):
-        while lstring[right] in testset:
-            testset.remove(lstring[left]) 
-            left += 1
-        testset.add(lstring[right])
-        
-        max_substring_len = max(max_substring_len, right-left+1)
-    return max_substring_len
-
-        
+        for str in strs:
+            sorted_str = "".join(sorted(str))
+            print(sorted_str)
+            if sorted_str not in result_dict:
+                result_dict[sorted_str] = [str]
+            else:
+                result_dict[sorted_str].append(str)
+        print(result_dict)
+        for _,value in result_dict.items():
+            result.append(value)
+        return result
 
 
 if __name__=="__main__":
-    st = 'geekforgeeks'
-    print(longest_substring(st))
+
+    strs = ["eat","tea","tan","ate","nat","bat"]
+    print(merge(strs))
