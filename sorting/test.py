@@ -1,22 +1,27 @@
 from collections import Counter
-def merge(strs):
-        result = [] 
-        result_dict = {}
+def sort(nums):
 
-        for str in strs:
-            sorted_str = "".join(sorted(str))
-            print(sorted_str)
-            if sorted_str not in result_dict:
-                result_dict[sorted_str] = [str]
-            else:
-                result_dict[sorted_str].append(str)
-        print(result_dict)
-        for _,value in result_dict.items():
-            result.append(value)
-        return result
+   
 
+    candidate_count = 0
+    candidate = None
+    i = 0 
+    while i <= len(nums)-1:
+        print(f'candidate {candidate}, count {candidate_count}')
+        if candidate == nums[i] and candidate_count == 2:
+            del nums[i]
+            print(f'deleting this candidate {candidate}')
+        elif candidate == nums[i] and candidate_count <2:
+            candidate_count += 1
+            i += 1
+        elif candidate != nums[i]:
+            candidate_count = 1
+            candidate = nums[i]
+            i += 1
+    return nums 
 
+       
 if __name__=="__main__":
 
-    strs = ["eat","tea","tan","ate","nat","bat"]
-    print(merge(strs))
+    nums = [1,1,1,2,2,3]
+    print(sort(nums))

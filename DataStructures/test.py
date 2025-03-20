@@ -1,44 +1,26 @@
-def insertionsort(nums):
+from collections import defaultdict
 
-    for i in range(1, len(nums)):
-        j = i - 1
-        key = list[i]
-        while j >= 0  and nums[j] > key:
-            nums[j+1] = nums[j]
-            j -= 1
-        nums[j+1] = key
-    return nums
-            
+teststack = [] 
 
+def random(val):
+    if val not in teststack:
+        teststack.append(val)
 
-
-if __name__ == "__main__":
-
-    list = [4,6,2,-1,9,55,33]
-    print(insertionsort(list))
-
-def topview (root):
-
-    if not root:
-        return None 
+def deletet(val):
+    if val in teststack:
+        del teststack[-1]
     
-    hd = 0 
-    node_dict = {} 
-    queue.append((root, hd))
-    while queue:
+    
 
-        node, hd = queue.popleft()
-        if hd not in node_dict:
-            node_dict[hd] = node 
 
-        if node.left:
-            queue.append((node.left,hd-1))
+random(3)
+random(4)
+print(teststack)
+deletet(3)
+deletet(4)
+print(teststack)
 
-        if node.right:
-            queue.append((node.right, hd+1))
 
-    for key in sorted(node_dict.keys()):
-        print(test_dict[key])
 
 
 

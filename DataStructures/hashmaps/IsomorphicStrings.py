@@ -2,21 +2,22 @@ from collections import Counter
 
 def isIsomorphic(s: str, t: str) -> bool:
 
-    scounter = Counter(s)
-    tcounter = Counter(t)
+        s_to_t = {} 
+        t_to_s = {} 
 
-    print(scounter)
-    print(tcounter)
+        for schar , tchar in zip(s,t):
+            if schar in s_to_t:
+                if s_to_t[schar] != tchar:
+                    return False
+            else:
+                s_to_t[schar] = tchar
 
-    if len(s) != len(t):
-        return False
-
-    for i in range(len(s)):
-        print(scounter[i])
-        print(tcounter[i])
-        if scounter[i] != tcounter[i]:
-            return False
-    return True
+            if tchar in t_to_s:
+                if t_to_s[tchar] != schar:
+                    return False
+            else:
+                t_to_s[tchar] = schar
+        return True
 
 
 if __name__ == "__main__":
